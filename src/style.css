@@ -91,20 +91,49 @@ button:hover {
     justify-content: space-around;
 }
 
-#book {
+#book, #menu-full {
     transition: box-shadow 0.2s;
     background-color: var(--color-light);
     color: var(--color-dark);
-    width: 7em;
+    width: fit-content;
+    padding: 0 1em;
     font-size: 1.5rem;
     border-radius: 1em;
 }
 
-#book:hover {
+#book:hover, #menu-full:hover {
     box-shadow: 0px 0px 15px gold;
     transition: box-shadow 0.2s linear;
 }
 
 .current {
     color: gold;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    grid-column: 1 / -1;
 }
