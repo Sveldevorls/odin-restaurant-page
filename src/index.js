@@ -1,4 +1,5 @@
 import "./style.css"
+import homeNode from "./home.js"
 
 const navButtons = document.querySelector("nav").querySelectorAll("button");
 let currentPage = "home";
@@ -13,3 +14,6 @@ navButtons.forEach(button => button.addEventListener("mouseout", (e) => {
     e.target.classList.remove("current");
     currentPageButton.classList.add("current");
 }))
+
+const contentField = document.getElementById("content");
+contentField.appendChild(homeNode);

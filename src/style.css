@@ -65,8 +65,8 @@ button:hover {
 }
 
 #content {
-    margin: 2em;
-    width: 70%;
+    padding: 2em;
+    width: 80%;
     height: fit-content;
 }
 
