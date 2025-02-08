@@ -10,6 +10,7 @@
 }
 
 body {
+    color: var(--color-light);
     background-color: var(--color-dark);
 
     min-height: 100vh;
@@ -19,7 +20,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 90%;
     padding: 1em;
 
     display: flex;
@@ -30,23 +31,26 @@ header {
 header::after {
     content: "";
     height: 1px;
-    width: 90%;
+    width: inherit;
     margin: 0 auto;
     background: linear-gradient(90deg, var(--color-dark) 0%,
                                        var(--color-light) 50%, 
                                        var(--color-dark) 100%);
 }
 
+#logo {
+    margin-right: auto;
+}
+
 nav {
     width: inherit;
     display: flex;
-    justify-content: center;
     gap: 3em;
 }
 
 button {
     transition: color 0.5s;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--color-light);
     width: fit-content;
     height: 2lh;
@@ -58,4 +62,49 @@ button:hover {
     cursor: pointer;
     color: gold;
     transition: color 0.5s;
+}
+
+#content {
+    margin: 2em;
+    width: 70%;
+    height: fit-content;
+}
+
+#content img {
+    border-radius: 2em;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.home {
+    font-size: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2em;
+}
+
+.home > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#book {
+    transition: box-shadow 0.2s;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    width: 7em;
+    font-size: 1.5rem;
+    border-radius: 1em;
+}
+
+#book:hover {
+    box-shadow: 0px 0px 15px gold;
+    transition: box-shadow 0.2s linear;
+}
+
+.current {
+    color: gold;
 }
